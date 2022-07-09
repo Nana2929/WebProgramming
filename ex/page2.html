@@ -1,0 +1,121 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .content {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        .content::after {
+            content: "";
+            background-image:url('images/flowers-blue.png');
+            background-size: contain /*20% 50%*/;
+            opacity: 0.7;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: fixed;
+            z-index: -1;
+        }
+        .div_v{
+            background-color:#AED6F1;
+            position:relative;
+            border: 5px;
+            border-radius: 25px; /*make rounded div corners*/
+            width: 500px;
+            height: 450px;
+            margin:0 auto;
+        }
+        .div_a{
+            background-color:#a6e2ad;
+            position:relative;
+            border: 5px;
+            border-radius: 25px; /*make rounded div corners*/
+            width: 500px;
+            height: 200px;
+            margin:0 auto;
+        }
+        .pdiv{
+            position:absolute;
+            top: 5px;
+            bottom:5px;
+            left:5px;
+            right:5px;
+            height:350px; margin-top:175px;
+            margin:0 auto;
+            align-items: center;
+            text-align: center;
+        }
+        .nicep{
+            text-align: center;
+            font-family: "Courier";
+            color: #154360;
+            font-size:130%;
+        }
+        .videoTest > video{
+            border:-5px;
+            margin:0px;
+            padding:0px;
+        }
+    </style>
+    <title>
+        Adding My fav music</title>
+</head>
+<body>
+    <div class = "content">
+      <div class = "div_v">
+          <div class = "pdiv">
+        <p class = "nicep"> Avid (86-不存在的戰區) by SLS Music ft. YuLun
+        </p><video poster="images/86.jpg"
+    width="400" height="300"
+    preload="metadata"
+    controls
+    autoplay
+    loop>
+    <source src="videos/Avid(86)_SLSMusic_ft.YuLun-(480p).mp4"  type = "video/mp4">
+    <source src="movie.ogg" type="video/ogg"> <!--alternative source to choose from,
+        not in my local though-->
+    </video>
+    </div>
+    </div>
+    <br>
+    <div class = "div_a">
+    <div class = "pdiv">
+        <p class = "nicep"> Ham by ずっと真夜中でいいのに </p>
+    <audio controls autoplay>
+    <source src="audios/ham.mp3" />
+        <p>This browser does not support our audio format.</p>
+    </audio>
+    </div>
+    </div>
+    <br>
+    <!--YouTube forbids embedding some
+        videos in a localhost environment
+        without a public domain,
+        but your video can be embedded with no issue through a public
+        domain/ sub-domain
+        try the same using webhosting apps or online html tools.-->
+    <div class = "div_v">
+        <div class = "pdiv">
+            <p class = "nicep"> Never Stop by 澤野弘之 ft. Laco </p>
+            <object data="https://www.youtube.com/embed/dH7DQfDAR4A"
+                width="400" height="300" frameborder="0" allowfullscreen
+                allow = "encrypted-media" content = "no-reference">
+        </object>
+            <!--# dH7DQfDAR4A for Never Stop, fqYFkPeYqoI for Hands up to the Sky-->
+        </div>
+        </div>
+    </div>
+</body>
+</html>
